@@ -1,0 +1,17 @@
+{
+  "name": "incremental-react-migration",
+  "private": true,
+  "description": "Migrate a legacy React 16 app to React 19 + TypeScript one page at a time, using a custom element and a shared Redux store.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "setup": "npm --prefix next-app install && npm --prefix legacy-host install",
+    "build:next": "npm --prefix next-app run build",
+    "build": "npm run build:next && npm --prefix legacy-host run build",
+    "dev": "npm run build:next && npm --prefix legacy-host run dev",
+    "typecheck": "npm --prefix next-app run typecheck",
+    "test": "npm --prefix next-app test"
+  }
+}
